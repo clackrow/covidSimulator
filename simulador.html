@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="p5.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <script src="Chart.min.js"></script>
+  </head>
+
+
+<body>
+    <script src="population.js"></script>
+    <script src="person.js"></script>
+    <div class="grafico">
+      <canvas id="chart" width="400px" height="200px"></canvas>
+      <script src="chart.js"></script>
+    </div>
+  <div class="legenda">
+    <img src="img/legenda01.jpg" width="300px" height="250px">
+  </div>
+  <div class="explain">
+    <h1>Como este simulador funciona:</h1>
+    <hr>
+    <h2>Como é gerada a simulação:</h2>
+    <p>Esta simulação cria 100 personagens neste espaço restrito. Estes personagens são representados
+    por círculos. Ao gerá-los, existe uma probabilidade de eles serem idosos ou adultos, cada um com
+    sua respectiva cor (vide legenda acima) e um deles irá nascer infectado. Todos eles andam de forma aleatória
+    neste espaço restrito.
+    </p>
+    <h2>Contágio:</h2>
+    <p>Ao passar perto de outro personagem infectado, existe a probabilidade dele se infectar. A contagiosidade pode sere
+    regulada nos botões de regulagem. Uma contagiosidade maior significa que um infectado pode transmitir a doença por uma distância maior
+    e o indivúduo susceptível tem maior probabilidade de adquirí-la.</p>
+    <h2>Cura ou morte:</h2>
+    <p>Assim que um personagem é infectado, inicia-se uma contagem de tempo de infecção. Passado este intervalo, nosso personagem
+    pode ter dois desfechos: cura ou morte.
+    O desfecho de morte depende da taxa de mortalidade para sua faixa etária, que pode ser regulada inserindo outros valores nos campos
+    de taxa de mortalidade. Se o indivíduo não morre, ele é curado (verde). Indivíduos mortos são excluídos da animação.</p>
+    <h2>Distanciameto social:</h2>
+    <p>Se o distanciamento social for ligado, os personagens passam a se repelir entre si, evitando contato com seus parceiros.
+    Um nível maior de distanciamento social na regulagem aumenta a distância que eles preferem manter entre si.</p>
+    <h2>Isolamento de idosos:</h2>
+    <p>Quando o isolamento de idosos está ativado, alguns idosos fogem para fora da tela imediatamente, outros são mais corajosos
+    e preferem ficar na tela, tudo isso é baseado em probabilidades de isolamento.</p>
+    <h2>Testagem:</h2>
+    <p>Quando a testagem é ligada, o programa vai se esforçar para encontrar os indivíduos infectados (vermelho), e os isolar do contato com os outros.
+    Porém, quando um indivíduo adoece, existe a probabilidade dele se tornar assintomático, e a probabilidade de testagem deste indivíduo diminui.
+    Um nível de testagem mais elevado começa a detectar mais pessoas assintomáticas.</p>
+  </div>
+</body>
+
+</html>
