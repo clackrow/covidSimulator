@@ -1,0 +1,31 @@
+html{
+
+}
+
+body {
+  font-weight: 300;
+  overflow-x: hidden;
+  margin-top: : 0px;
+  display: flex;
+}
+
+.grafico {
+    display: flex;
+    /* margin-left: 0px; */
+    width: 800px;
+    height: 350px;
+    padding-top: 500px;
+}
+
+.legenda {
+  /* width: 20px;
+  height: 20px; */
+  display: flex;
+  margin-left: -100px;
+  margin-top: 50px;
+}
+
+.explain{
+  margin-left: -1000px;
+  margin-top: 900px;
+}
