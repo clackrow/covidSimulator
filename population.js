@@ -86,7 +86,7 @@ function draw() {
     mortalityYoung = 2*initialMortalityYoung;
     mortalityElder = 2*initialMortalityElder;
   }
-  if(infectionCounter > 50){
+  if(infectionCounter > popSize/2){
     mortalityYoung = 3*initialMortalityYoung;
     mortalityElder = 3*initialMortalityElder;
   }
@@ -201,11 +201,11 @@ function checkButtons(){
 }
 
 function feedData(){
-  if(infectionCounter > popSize/3){
-    mortalityYoung = 20;
-    mortalityElder = 60;
-  }
-  if (days < 100) {
+//   if(infectionCounter > popSize/3){
+//     mortalityYoung = 20;
+//     mortalityElder = 60;
+//   }
+  if (days < 100 && infectionCounter > 0) {
     if (counter % 33 == 0) {
       days++;
       addData(chart, infectionCounter, deadCounter, cureCounter);
